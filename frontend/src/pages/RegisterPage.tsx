@@ -37,7 +37,7 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex flex-col gap-4 items-center justify-center bg-gray-100">
       <form
         onSubmit={handleSubmit}
         className="bg-white p-8 rounded-lg shadow-md w-full max-w-md"
@@ -90,6 +90,16 @@ const RegisterPage = () => {
           Register
         </button>
       </form>
+
+      <div>
+        Already registered?  &nbsp;
+        <span 
+          onClick={() => navigate("/login")} 
+          className="text-blue-500 cursor-pointer"
+          >
+            Login here
+        </span>
+      </div>
     </div>
   );
 };
